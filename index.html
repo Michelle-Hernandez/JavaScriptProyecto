@@ -83,7 +83,7 @@
               <h5 class="card-title pt-2 text-center text-dark">Base Instant Age Rewind</h5>
               <div class="card-body">
                 <p class="card-text text-black-50 description">Ofrece la transformación de cuatro productos en un solo paso. </p>
-                <h5 class="text-dark">Precio: <span class="precio">$ 2000</span></h5>
+                <h5 class="text-dark">Precio: <span class="precio">€ 10</span></h5>
                 <div class="d-grid gap-2">
                 <button  class="btn btn-dark button">Añadir a Carrito</button>
               </div>
@@ -98,7 +98,7 @@
                 <p class="card-text text-black-50 description">
                   Proporciona unos labios brillantes y con un aspecto más voluminoso. 
                   </p>
-                <h5 class="text-dark">Precio: <span class="precio">$ 1200</span></h5>
+                <h5 class="text-dark">Precio: <span class="precio">€ 5</span></h5>
                 <div class="d-grid gap-2">
                 <button  class="btn btn-dark button">Añadir a Carrito</button>
               </div>
@@ -111,7 +111,7 @@
                <h5 class="card-title pt-2 text-center text-dark">Mascara de Pestañas </h5>
               <div class="card-body">
                 <p class="card-text text-black-50 description">Arquea las pestañas hasta por 24 horas!</p>
-                <h5 class="text-dark">Precio: <span class="precio">$ 2000</span></h5>
+                <h5 class="text-dark">Precio: <span class="precio">€ 6</span></h5>
                 <div class="d-grid gap-2">
                 <button  class="btn btn-dark button">Añadir a Carrito</button>
               </div>
@@ -125,7 +125,7 @@
               <h5 class="card-title pt-2 text-center text-dark">Labial Mate</h5>
               <div class="card-body">
                 <p class="card-text text-black-50 description">Labial de acabado matte cremoso con pigmentos cálidos.</p>
-                <h5 class="text-dark">Precio: <span class="precio">$ 1500</span></h5>
+                <h5 class="text-dark">Precio: <span class="precio">€ 7</span></h5>
                 <div class="d-grid gap-2">
                 <button  class="btn btn-dark button">Añadir a Carrito</button>
               </div>
@@ -164,17 +164,31 @@
           <h3 class="itemCartTotal text-black-50">Total: 0</h3>
         </div>
         <div class="col d-flex justify-content-end">
-          <button class="btn btn-success">COMPRAR</button>
+          <button class="btn btn-success sweetAlert">COMPRAR</button>
         </div>
       </div>
       
       </div>
     </div>
 
+    <h3 class="titulo">¿Quieres saber el valor de tu producto en $USD?</h3>
+
+<div class="divisaBody">
+    <div class="divisa">
+      <div class="nombre">Euros</div>
+      <input class="valor" type="number" value="1" data-cambio="1" onchange="valorModificado(this)"/>
+    </div>
+    
+    <div class="divisa">
+      <div class="nombre">Dólares</div>
+      <input class="valor" type="number" value="1" data-cambio="1.25" id="USD" />
+    </div>
+    
+</div>
     <footer class="bg-dark p-3 mt-5">
       <p class="text-center m-0 text-muted">Beauty Shop</p>
     </footer>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

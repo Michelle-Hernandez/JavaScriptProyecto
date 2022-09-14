@@ -140,3 +140,59 @@ window.onload = function(){
     renderCarrito()
   }
 }
+
+//  Función para actualizar los precios
+
+const productPrices = [
+  { 'name': 'Base', 'price': 10 },
+  { 'name': 'Gloss', 'price': 5 },
+  { 'name': 'Mascara', 'price': 6 },
+  { 'name': 'Labial', 'price': 7 },
+]
+
+const updatedProductPrices = productPrices.map((e) => e.price * 1.15)
+console.log(updatedProductPrices);
+
+const sweetAlert = document.querySelector('.sweetAlert')
+const itemCartTotal = document.querySelector('.itemCartTotal')
+
+sweetAlert.onclick = (e) => {
+  if (carrito === 0) swal({
+    title: "Tu carrito está vacio!",
+    text: "Añade artículos a tu carrito para seguir comprando",
+    icon: "error",
+  });
+    
+  else swal({
+    title: "Muchas Gracias!",
+    text: "Tu compra ha sido confirmada.",
+    icon: "success",
+  });
+}
+
+//API
+
+let inputs = document.querySelectorAll(".valor");
+
+
+let url = 'https://api.exchangeratesapi.io/latest?symbols=USD,GBP,JPY';
+fetch(url)
+  .then(r => r.json())
+  .then(data => {
+    document.querySelector('#USD')
+      .dataset.cambio = data.rates.USD;
+
+    inputs.forEach(input => {
+      input.value = input.dataset.cambio;
+    });
+  })
+  .catch(error => console.error(error))
+
+function valorModificado(input) {
+  let factor = input.value / input.dataset.cambio;
+
+  inputs.forEach(input => {
+    input.value = (input.dataset.cambio * factor).toFixed(2);
+  });
+}
+

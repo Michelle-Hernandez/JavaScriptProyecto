@@ -1,5 +1,6 @@
 body{
-  background-color: #ffffffea;
+    background-color: #ffffffea;
+    
 }
 header, .alert{
   z-index: 100;
@@ -51,8 +52,43 @@ header, .alert{
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #ea7100ec;
+    
 }
 a {
     color: rgb(226, 43, 186);
     
+}
+
+
+divisaBody {
+  font-family: sans-serif;
+ 
+  margin: 25px auto;
+}
+
+.divisa {
+  display: grid;
+  /* cuadrícula */
+  grid-template-columns: 50% 50%;
+  /* 2 columnas iguales */
+  margin-bottom: 15px;
+  background:black;
+  color: white;
+  max-width: 50%;
+  margin-left: 25%;
+}
+
+.nombre,
+.valor {
+  padding: 5px;
+  font-size: 16px;
+  align-self: center;
+  /* alinear elemento al centro en altura */
+  text-align: center;
+  /* alinear texto al centro en ancho */
+}
+
+.titulo{
+margin-left: 23%;
+margin-bottom: 20px;
 }
